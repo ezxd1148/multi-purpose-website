@@ -1,5 +1,8 @@
 from enum import Enum
 
+def main():
+    print("Assignment 3")
+
 class Students:
     def __init__(self, quiz = 0, assignment = 0, exam = 0):
         self.quiz = quiz,
@@ -104,5 +107,5 @@ print("Average Mark of Grade:", )
 print(f"Grade F: {student_F} student(s)")
 print("Average Mark of Grade:", )
 
-
-
+if __name__ == "__init__":
+    main()
