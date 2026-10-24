@@ -87,10 +87,31 @@ for i in range(len(students_array) - 1):
     elif students_array[i].sum < 50:
         students_array[i].student_grade(6)
 
+count_A = []
+count_B = []
+count_C = []
+count_D = []
+count_E = []
+count_F = []
 
+for i in students_array:
+    if i.grade == 'A':
+        count_A.append(i.sum)
+    if i.grade == 'B':
+        count_B.append(i.sum)
+    if i.grade == 'C':
+        count_C.append(i.sum)
+    if i.grade == 'D':
+        count_D.append(i.sum)
+    if i.grade == 'E':
+        count_E.append(i.sum)
+    if i.grade == 'F':
+        count_F.append(i.sum)
+
+## too tired to continue
 
 print(f"Grade A: {student_A} student(s)")
-print("Average Mark of Grade:", )
+print("Average Mark of Grade:", count_A)
 
 print(f"Grade B: {student_B} student(s)")
 print("Average Mark of Grade:", )
