@@ -3,6 +3,9 @@ sum = 0
 num = 0
 count = 0
 
+print("Welcome to the Sum & Average Calculator!")
+print("Enter any number to start and -1 to end:")
+
 while num != -1:
     num = int(input())
     sum += num
