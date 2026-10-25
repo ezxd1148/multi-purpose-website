@@ -67,25 +67,29 @@ student_D = 0
 student_E = 0
 student_F = 0
 
-for i in range(len(students_array) - 1):
+print(students_array[0].sum[0])
+
+for i in range(len(students_array)):
     print(f"Student {i+1} Grade")
     students_array[i].sum_marks
-    if 90 <= students_array[i].sum >= 100:
+    if 90 <= int(students_array[i].sum[0]) <= 100:
         students_array[i].student_grade(1)
         student_A += 1
-    elif 80 <= students_array[i].sum >= 89:
+    elif 80 <= int(students_array[i].sum[0]) <= 89:
         students_array[i].student_grade(2)
         student_B += 1
-    elif 70 <= students_array[i].sum >= 79:
+    elif 70 <= int(students_array[i].sum[0]) <= 79:
         students_array[i].student_grade(3)
         student_C += 1
-    elif 60 <= students_array[i].sum >= 69:
+    elif 60 <= int(students_array[i].sum[0]) <= 69:
         students_array[i].student_grade(4)
         student_D += 1
-    elif 50 <= students_array[i].sum >= 59:
+    elif 50 <= int(students_array[i].sum[0]) <= 59:
         students_array[i].student_grade(5)
-    elif students_array[i].sum < 50:
+        student_E += 1
+    elif int(students_array[i].sum[0]) <= 50:
         students_array[i].student_grade(6)
+        student_F += 1
 
 count_A = []
 count_B = []
@@ -94,21 +98,38 @@ count_D = []
 count_E = []
 count_F = []
 
-for i in students_array:
-    if i.grade == 'A':
-        count_A.append(i.sum)
-    if i.grade == 'B':
-        count_B.append(i.sum)
-    if i.grade == 'C':
-        count_C.append(i.sum)
-    if i.grade == 'D':
-        count_D.append(i.sum)
-    if i.grade == 'E':
-        count_E.append(i.sum)
-    if i.grade == 'F':
-        count_F.append(i.sum)
 
-## too tired to continue
+for i in students_array:
+    i.sum_marks
+    if i.grade == 'A':
+        count_A.append(int(i.sum[0]))
+        print(int(i.sum[0]))
+    if i.grade == 'B':
+        count_B.append(int(i.sum[0]))
+        print(int(i.sum[0]))
+    if i.grade == 'C':
+        count_C.append(int(i.sum[0]))
+        print(int(i.sum[0]))
+    if i.grade == 'D':
+        count_D.append(int(i.sum[0]))
+        print(int(i.sum[0]))
+    if i.grade == 'E':
+        count_E.append(int(i.sum[0]))
+        print(int(i.sum[0]))
+    if i.grade == 'F':
+        count_F.append(int(i.sum[0]))
+        print(int(i.sum[0]))
+
+grade_array = [count_A, count_B, count_C, count_D, count_E, count_F]
+sum_array = []
+sum = 0
+
+for i in grade_array:
+    for j in i:
+        sum += j
+    sum_array.append(sum)
+
+print(sum_array)
 
 print(f"Grade A: {student_A} student(s)")
 print("Average Mark of Grade:", count_A)
