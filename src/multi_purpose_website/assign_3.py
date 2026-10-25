@@ -5,6 +5,26 @@ from enum import Enum
 def main():
     print("Assignment 3")
 
+    students = int(input("Number of students:"))
+    students_list = []
+
+    for i in range(students):
+        
+        print(f"Student {i + 1}")
+        student = Student()
+        quizM = int(input("Enter quiz marks:"))
+        student.quiz_marks(quizM)
+        assignmentM = int(input("Enter assignment marks:"))
+        student.assignment_marks(assignmentM)
+        examM = int(input("Enter exam marks:"))
+        student.exam_marks(examM)
+
+        students_list.append(student)
+
+    ## Calculate students sum score
+    for i in students_list:
+        print(i.student_grade())
+
 class Student:
     def __init__(self, quiz = 0, assignment = 0, exam = 0):
         self.quiz = quiz
@@ -64,26 +84,6 @@ class Student:
         D = 4
         E = 5
         F = 6
-
-students = int(input("Number of students:"))
-students_list = []
-
-for i in range(students):
-    
-    print(f"Student {i + 1}")
-    student = Student()
-    quizM = int(input("Enter quiz marks:"))
-    student.quiz_marks(quizM)
-    assignmentM = int(input("Enter assignment marks:"))
-    student.assignment_marks(assignmentM)
-    examM = int(input("Enter exam marks:"))
-    student.exam_marks(examM)
-
-    students_list.append(student)
-
-## Calculate students sum score
-for i in students_list:
-    print(i.student_grade())
 
 if __name__ == "__main__": # it is main genius
     main()
