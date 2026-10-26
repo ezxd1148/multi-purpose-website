@@ -38,7 +38,7 @@ def main():
         user.user_name("I am not health anymore")
         print("userName working")
     except Exception as e:
-        raise Exception(f"Error found: {e}") from e
+        raise (f"Error found: {e}")
 
 if __name__ == "__main__":
     main()
