@@ -26,12 +26,12 @@ def calculate_steps(num_of_students):
         total_steps = total_steps + steps
 
     percent = float((count/num_of_students) * 100)
-    average_steps = (total_steps/num_of_students)
+    average_steps = total_steps/num_of_students
     achieved_target = count
     not_achieved_target = num_of_students - count
 
     return average_steps, achieved_target, not_achieved_target, percent
-    
+
 
 if __name__ == "__main__":
     main()

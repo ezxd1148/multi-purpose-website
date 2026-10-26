@@ -12,7 +12,7 @@ while num != -1:
     num = int(input())
     total_num += num
     if total_num == -1:
-        sum += 1
+        total_num += 1
         break
     count += 1
 

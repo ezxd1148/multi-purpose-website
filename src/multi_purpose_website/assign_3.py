@@ -1,15 +1,22 @@
+"""
+Student quiz marks and grades calculator
+"""
+
 from enum import Enum
 
 # IN PROGRESS FOR REFACTORING
 
 def main():
+    """
+    healthchecks
+    """
     print("Assignment 3")
 
     students = int(input("Number of students:"))
     students_list = []
 
     for i in range(students):
-        
+
         print(f"Student {i + 1}")
         student = Student()
         quiz_m = int(input("Enter quiz marks:"))
@@ -40,7 +47,7 @@ class Student:
             Add/Update new quiz marks for student
         """
         if not 0 <= x <= 40:
-            raise Exception
+            raise Exception("Marks is more than 40 or less than 0")
         self.quiz = x
 
     def assignment_marks(self, x):
@@ -48,7 +55,7 @@ class Student:
             Add/Update new assignment marks for student
         """
         if not 0 <= x <= 30:
-            raise Exception
+            raise Exception("Marks is more than 30 or less than 0")
         self.assignment = x
 
     def exam_marks(self, x):
@@ -57,7 +64,7 @@ class Student:
         """
 
         if not 0 <= x <= 30: # negative value should not be possible
-            raise Exception
+            raise Exception("Marks is more than 30 or less than 0")
         self.exam = x
 
     def sum_marks(self):
