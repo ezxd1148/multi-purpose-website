@@ -1,15 +1,20 @@
+"""
+assign_2.py, student step calculate
+"""
 
 def main():
+    """
+    health check
+    """
     print("This file is working as is")
+    calculate_steps(2)
 
-def calculate_steps():
+def calculate_steps(num_of_students):
+    """
+    calculate steps of number of students
+    """
 
-    try:
-        num_of_students = int(input("Enter number of students: "))
-    except:
-        raise TypeError
-
-    sum = 0
+    total_steps = 0
     count = 0
 
     for i in range(num_of_students):
@@ -18,10 +23,10 @@ def calculate_steps():
         if steps >= 10000:
             count += 1
 
-        sum = sum + steps
+        total_steps = total_steps + steps
 
     percent = float((count/num_of_students) * 100)
-    average_steps = (sum/num_of_students)
+    average_steps = (total_steps/num_of_students)
     achieved_target = count
     not_achieved_target = num_of_students - count
 
