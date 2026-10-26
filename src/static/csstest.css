@@ -21,3 +21,15 @@ body {
     box-shadow: 10px 10px gray;
     
 }
+
+.shade {
+    background-color: grey;
+    opacity: 0.75;
+    height: 150px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Courier New', ui-monospace , monospace;
+    color: white;
+
+}
