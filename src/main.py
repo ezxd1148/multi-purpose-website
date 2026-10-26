@@ -9,7 +9,7 @@ by: ezxd1148 (afdhal)
 """
 
 from flask import Flask, render_template, request
-from multi_purpose_website import assign_3
+# from multi_purpose_website import assign_3
 
 app = Flask(__name__)
 
@@ -32,7 +32,7 @@ def tool1():
 def tool2():
     """
         Return tool2 page for route /tool2
-    """ 
+    """
     return render_template('tool2.html')
 
 #a1
@@ -66,17 +66,15 @@ def tool6():
     """
     return render_template('tool6.html')
 
-@app.route("/test", methods=["GET", "POST"])
-def test():
+@app.route("/debug_test", methods=["GET", "POST"])
+def debug_test():
     """
         Debug route at /test
     """
-    test = None
-    
+    ## debug_test = None
+
     if request.method == "POST":
         text = request.form.get("student_count", "")
         print(text)
 
     return render_template('tool5.html')
-
-
