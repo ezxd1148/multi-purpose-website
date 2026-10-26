@@ -12,12 +12,12 @@ def main():
         
         print(f"Student {i + 1}")
         student = Student()
-        quizM = int(input("Enter quiz marks:"))
-        student.quiz_marks(quizM)
-        assignmentM = int(input("Enter assignment marks:"))
-        student.assignment_marks(assignmentM)
-        examM = int(input("Enter exam marks:"))
-        student.exam_marks(examM)
+        quiz_m = int(input("Enter quiz marks:"))
+        student.quiz_marks(quiz_m)
+        assignment_m = int(input("Enter assignment marks:"))
+        student.assignment_marks(assignment_m)
+        exam_m = int(input("Enter exam marks:"))
+        student.exam_marks(exam_m)
 
         students_list.append(student)
 
@@ -26,6 +26,9 @@ def main():
         print(i.student_grade())
 
 class Student:
+    """
+    Initialize newstudent class
+    """
     def __init__(self, quiz = 0, assignment = 0, exam = 0):
         self.quiz = quiz
         self.assignment = assignment
@@ -37,7 +40,7 @@ class Student:
             Add/Update new quiz marks for student
         """
         if not 0 <= x <= 40:
-            raise Exception("Invalid Marks")
+            raise Exception
         self.quiz = x
 
     def assignment_marks(self, x):
@@ -45,7 +48,7 @@ class Student:
             Add/Update new assignment marks for student
         """
         if not 0 <= x <= 30:
-            raise Exception("Invalid Marks")
+            raise Exception
         self.assignment = x
 
     def exam_marks(self, x):
@@ -54,23 +57,29 @@ class Student:
         """
 
         if not 0 <= x <= 30: # negative value should not be possible
-            raise Exception("Invalid Marks")
+            raise Exception
         self.exam = x
 
     def sum_marks(self):
+        """
+        calculate the total marks of student
+        """
         # refactored becasue it should return total not add a total to the student class
         return self.quiz + self.assignment + self.exam
 
     def student_grade(self):
-        if (90 <= self.sum_marks() <= 100):
+        """
+        Identify student grade based on sum
+        """
+        if 90 <= self.sum_marks() <= 100:
             x = 1
-        elif (80 <= self.sum_marks() <= 89):
+        elif 80 <= self.sum_marks() <= 89:
             x = 2
-        elif (70 <= self.sum_marks() <= 79):
+        elif 70 <= self.sum_marks() <= 79:
             x = 3
-        elif (60 <= self.sum_marks() <= 69):
+        elif 60 <= self.sum_marks() <= 69:
             x = 4
-        elif (50 <= self.sum_marks() <= 59):
+        elif 50 <= self.sum_marks() <= 59:
             x = 5
         else:
             x = 6
