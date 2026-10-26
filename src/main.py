@@ -9,7 +9,7 @@ by: ezxd1148 (afdhal)
 """
 
 from flask import Flask, render_template, request
-# from multi_purpose_website import assign_3
+from multi_purpose_website.assign_3 import Student
 
 app = Flask(__name__)
 
@@ -52,12 +52,34 @@ def tool4():
     return render_template('tool4.html')
 
 #a3
-@app.route("/tool5")
+@app.route("/tool5", methods=["GET", "POST"])
 def tool5():
     """
         Return tool5 page for route /tool5
     """
-    return render_template('tool5.html')
+    result = None
+    error = None
+
+    if request.method == "POST":
+        try:
+            quiz = int(request.form["quiz"])
+            assignment = int(request.form["assignment"])
+            exam = int(request.form["exam"])
+
+            student = Student()
+            student.quiz_marks(quiz)
+            student.assignment_marks(assignment)
+            student.exam_marks(exam)
+
+            result = {
+                "total": student.sum_marks(),
+                "grade": student.student_grade(),
+            }
+
+        except (ValueError, KeyError):
+            error = "Please enter valid marks!"
+
+    return render_template('tool5.html', result=result, error=error)
 
 @app.route("/tool6")
 def tool6():
