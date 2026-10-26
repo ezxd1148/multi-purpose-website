@@ -1,10 +1,10 @@
 """
 This just tool 2
 """
-count = int(0)
-num = int(input())
-while num != 0:
-    num //= 10
-    count += 1
+COUNT = int(0)
+NUM = int(input())
+while NUM != 0:
+    NUM //= 10
+    COUNT += 1
 
-print(count)
+print(COUNT)

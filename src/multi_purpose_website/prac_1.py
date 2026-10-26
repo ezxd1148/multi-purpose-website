@@ -1,21 +1,21 @@
 """
 This is the sum & average calculator, like the name suggest it does what it do
 """
-total_num = 0
-num = 0
-count = 0
+TOTAL_NUM = 0
+NUM = 0
+COUNT = 0
 
 print("Welcome to the Sum & Average Calculator!")
-print("Enter any number to start and -1 to end:")
+print("Enter any NUMber to start and -1 to end:")
 
-while num != -1:
-    num = int(input())
-    total_num += num
-    if total_num == -1:
-        total_num += 1
+while NUM != -1:
+    NUM = int(input())
+    TOTAL_NUM += NUM
+    if TOTAL_NUM == -1:
+        TOTAL_NUM += 1
         break
-    count += 1
+    COUNT += 1
 
-average = total_num / count if count > 0 else 0
-print ("Sum: ", total_num)
+average = TOTAL_NUM / COUNT if COUNT > 0 else 0
+print ("Sum: ", TOTAL_NUM)
 print("Average: " , format(average, '.2f'))
