@@ -1,34 +1,44 @@
-# This is for "What makes me mad" tool or plugin
+"""
+This is for "What makes me mad" tool or plugin
+"""
 
-class userInput:
+class UserInput:
+    """
+        classInput, takes user name and why as a whole
+
+        input: Name, Why
+    """
     def __init__(self, name, why = None):
         self.name = name
         self.why = why
-    
-    def userName(self, name):
+
+    def user_name(self, name):
         """
-            This is to rename user     
+            This is to rename user
         """
         self.name = name
 
-    def userWhy(self, why):
+    def user_why(self, why):
         """
             This is to set user's 'why'
         """
         self.name = why
 
 def main():
+    """
+        Healthcheck for this add_tool1.py if run as is
+    """
     print("Healthcheck")
 
     try:
-        user = userInput("health")
+        user = UserInput("health")
         print("user initialized successfully")
-        user.userWhy("Today, I am mad because I messed up my burger shift")
+        user.user_why("Today, I am mad because I messed up my burger shift")
         print("userWhy working")
-        user.userName("I am not health anymore")
+        user.user_name("I am not health anymore")
         print("userName working")
-    except:
-        raise Exception("Some error idk")
+    except Exception as e:
+        raise Exception(f"Error found: {e}")
 
 if __name__ == "__main__":
     main()
