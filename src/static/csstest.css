@@ -1,10 +1,23 @@
 
 h1 {
     font-family: 'Courier New', ui-monospace , monospace;
-    color: red;
-
+    color: goldenrod;
 }
 
+h2 {
+    font-family: 'Courier New', ui-monospace , monospace;
+    color: goldenrod;
+}
 body {
-    background-color: lightblue;
+    background-color: beige;
+    box
+}
+
+.container {
+    background-color: black;
+    width: 50%;
+    border: 2px solid goldenrod;
+    margin: auto;
+    box-shadow: 10px 10px gray;
+    
 }
