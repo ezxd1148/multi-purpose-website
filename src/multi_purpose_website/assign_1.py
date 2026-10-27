@@ -18,6 +18,10 @@ def calculates_flour(flour_weights: list[float]):
     Handle the int range in html side
     """
 
+    for i in flour_weights:
+        if !(0 <= i <= 100):
+            raise ValueError("Flour weight should only be in 0 - 100 range")
+
     if not flour_weights:
         raise ValueError("Flour list cannot be empty")
 
