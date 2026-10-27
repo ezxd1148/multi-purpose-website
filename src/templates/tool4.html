@@ -1,17 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='toolui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='csstest.css') }}">
+    <div class="shade">
+            <p style="padding: 20px 0px 20px 20px; text-shadow: 2px 2px black; font-size: smaller">
+                email: eizdiharrishman@gmail.com
+            </p>
+            <p style="padding: 20px 0px 20px 20px; text-shadow: 2px 2px black; font-size: smaller">
+                username: Xtreizz<br>
+                username: ezxd
+            </p>
+    </div>
+</head>
+
+
 <form method="post" action="{{ url_for('tool5') }}">
-  <label for="quiz">Quiz (Marks: 0 - 40)</label>
+  <br>
+  <br>
+  <label for="quiz">Quiz (Marks: 0 - 40)</label><br>
   <input id="quiz" type="number" name="quiz" min="0" max="40" required>
-
-  <label for="assignment">Assignment (Marks: 0 - 30)</label>
+  <br>
+  
+  <label for="assignment">Assignment (Marks: 0 - 30)</label><br>
   <input type="number" name="assignment" id="assignment" min="0" max="30" required>
-
-  <label for="exam">Exam (Marks: 0 - 30)</label>
+  <br>
+  
+  <label for="exam">Exam (Marks: 0 - 30)</label><br>
   <input type="number" name="exam" id="exam" min="0" max="30" required>
+  <br>
+  <button type="submit" style="margin-left: 20px; margin-top: 40px">Calculate now</button>
 
-  <button type="submit">Calculate now</button>
 </form>
 
 {% if result %}
   <p>Total: {{ result.total }}/100</p>
   <p>Grade: {{ result.grade }}</p>
 {% endif %}
+<br>
+<br>
+<a href="/" class="default">Go Back</a>

@@ -1,19 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='toolui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='csstest.css') }}">
+    <div class="shade">
+            <p style="padding: 20px 0px 20px 20px; text-shadow: 2px 2px black; font-size: smaller">
+                email: eizdiharrishman@gmail.com
+            </p>
+            <p style="padding: 20px 0px 20px 20px; text-shadow: 2px 2px black; font-size: smaller">
+                username: Xtreizz<br>
+                username: ezxd
+            </p>
+    </div>
+</head>
+
 <form method="POST" action="{{ url_for('tool2') }}">
+  <br>
+  <br>
   {% for i in range(10) %}
+
+  <div class="inputs">
     <label for="weight-{{ i }}">
       Flour {{ i + 1 }} (kg):
     </label>
-
+    
     <input type="number" id="weight-{{ i }}" name="weights" step="any" min="0" required>
 
   {% endfor %}
-  
+  </div>
+
+  <br>
   <button type="submit">Calculate</button>
-</form>
+</form><br><br>
 
 {% if result %}
-  <p>Total: {{result.total}}</p>
-  <p>Average: {{ result.average }}</p>
-  <p>heaviest: {{ result.heaviest }}</p>
+  <p class="outlierig">Total: {{result.total}}</p>
+  <p class="outlierig">Average: {{ result.average }}</p>
+  <p class="outlierig">heaviest: {{ result.heaviest }}</p>
 {% endif %}
-
+<br>
+<a href="/">Go Back</a>

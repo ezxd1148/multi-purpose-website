@@ -1,16 +1,28 @@
-
+div > p {
+    padding: 0px 0px 0px 20px; 
+    text-shadow: 2px 2px black; 
+    font-size: smaller;
+    margin: 0px;
+}
 h1 {
     font-family: 'Courier New', ui-monospace , monospace;
     color: goldenrod;
 }
-
+footer {
+    font-family: 'Courier New', ui-monospace , monospace;
+    color: black;
+    text-align:right;
+    padding-right: 10px;
+    font-size:smaller;
+}
 h2 {
     font-family: 'Courier New', ui-monospace , monospace;
     color: goldenrod;
 }
 body {
     background-color: beige;
-    box
+    background-image: url('../assets/toolss.jpg');
+    background-blend-mode: darken;
 }
 
 .container {
@@ -19,11 +31,13 @@ body {
     border: 2px solid goldenrod;
     margin: auto;
     box-shadow: 10px 10px gray;
+    font-size: 30px;
     
 }
 
 .shade {
-    background-color: grey;
+    background-color: #0A0A00;
+    box-shadow: 20px 15px 5px gray;
     opacity: 0.75;
     height: 150px;
     margin-top: 0px;
@@ -32,4 +46,39 @@ body {
     font-family: 'Courier New', ui-monospace , monospace;
     color: white;
 
+}
+
+button {
+    font-family: 'Courier New', ui-monospace , monospace;
+    font-size:25px;
+    background-color:gold;
+    color:black;
+    width: 200px 150px;
+    padding: 10px;
+    transition: background-color 1s, transform 0.5s;
+    
+
+}
+
+button:hover {
+    background-color:goldenrod;
+    transform: scale(1.1);
+}
+
+.tools {
+    margin:auto;
+    text-align:center;
+    justify-content:center;
+    display:flex;
+    width: 75%;
+}
+
+p , a {
+    font-family: 'Courier New', ui-monospace , monospace;
+    margin-left: 20px;
+}
+
+.outlierig {
+    font-family: 'Courier New', ui-monospace , monospace;
+    margin-left: 20px;
 }
