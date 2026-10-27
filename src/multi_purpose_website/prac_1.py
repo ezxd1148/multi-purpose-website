@@ -7,7 +7,6 @@ def main():
     """
     Health Checks
     """
-    pass
 
 
 # total_num = 0
