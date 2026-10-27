@@ -7,19 +7,9 @@ def main():
     """
     Health Checks
     """
+    pass
 
-
-"""
-ezxd1148 (Afdhal)
-
-Consider removing this file because of its feature simplicity
-
-OR
-
-Suggest what feature can we improve/add to make things fun
-"""
-
-# total_num = 0
+#total_num = 0
 # num = 0
 # count = 0
 #

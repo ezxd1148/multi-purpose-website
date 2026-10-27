@@ -14,6 +14,9 @@ def main():
 
 
 def count_number(num: int):
+    """
+    Count number length provided
+    """
     count = 0
 
     while num != 0:
