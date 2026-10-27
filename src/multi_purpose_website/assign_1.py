@@ -12,7 +12,7 @@ def main():
 
     print("Total KG: ", total_kg)
     print("Average KG: ", average_kg)
-    print("Heave Flour: ", heavy_flour)
+    print("Heavy Flour: ", heavy_flour)
 
     sample_list = [
         10,
