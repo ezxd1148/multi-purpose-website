@@ -22,7 +22,7 @@ class UserInput:
         """
             This is to set user's 'why'
         """
-        self.name = why
+        self.why = why
 
 def main():
     """
