@@ -1,3 +1,5 @@
+<a href="/">Go Back</a>
+
 <form method="POST" action="{{ url_for('tool2') }}">
   {% for i in range(10) %}
     <label for="weight-{{ i }}">
@@ -8,6 +10,7 @@
 
   {% endfor %}
   
+  <br>
   <button type="submit">Calculate</button>
 </form>
 

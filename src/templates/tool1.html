@@ -1,5 +1,18 @@
 <a href="/">Go Back</a>
 
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='toolui.css') }}"
+    <link rel="stylesheet" href="{{ url_for('static', filename='csstest.css') }}"
+    <div class="shade">
+            <p style="padding: 20px 0px 20px 20px; text-shadow: 2px 2px black; font-size: smaller">
+                email: eizdiharrishman@gmail.com
+            </p>
+            <p style="padding: 20px 0px 20px 20px; text-shadow: 2px 2px black; font-size: smaller">
+                username: Xtreizz<br>
+                username: ezxd
+            </p>
+    </div>
+</head>
 <form method="post" action="{{ url_for('tool1') }}">
   <label for="num">Enter a Number</label>
   <input id="num" type="number" name="num" required>
