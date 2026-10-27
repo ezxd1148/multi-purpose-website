@@ -1,0 +1,19 @@
+<form method="POST" action="{{ url_for('tool2') }}">
+  {% for i in range(10) %}
+    <label for="weight-{{ i }}">
+      Flour {{ i + 1 }} (kg):
+    </label>
+
+    <input type="number" id="weight-{{ i }}" name="weights" step="any" min="0" required>
+
+  {% endfor %}
+  
+  <button type="submit">Calculate</button>
+</form>
+
+{% if result %}
+  <p>Total: {{result.total}}</p>
+  <p>Average: {{ result.average }}</p>
+  <p>heaviest: {{ result.heaviest }}</p>
+{% endif %}
+

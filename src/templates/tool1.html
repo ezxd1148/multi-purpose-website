@@ -1,0 +1,12 @@
+<a href="/">Go Back</a>
+
+<form method="post" action="{{ url_for('tool1') }}">
+  <label for="num">Enter a Number</label>
+  <input id="num" type="number" name="num" required>
+
+  <button type="submit">Calculate now</button>
+</form>
+
+{% if result %}
+  <p>Number length count: {{ result }}</p>
+{% endif %}
