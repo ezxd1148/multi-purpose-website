@@ -13,6 +13,14 @@ def main():
     print("Average KG: ", average_kg)
     print("Heave Flour: ", heavy_flour)
 
+
+    sample_list = [10, 100.2, -2, 24, 3.0, 50, 20, 50, 60, 90] # has more than 100 and negative number
+
+    try:
+        total_kg, average_kg, heavy_flour = calculates_flour(sample_list)
+    except ValueError as e:
+        print(f"Error: {e}")
+
 def calculates_flour(flour_weights: list[float]):
     """
     Handle the int range in html side
