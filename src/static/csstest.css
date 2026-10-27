@@ -1,0 +1,35 @@
+
+h1 {
+    font-family: 'Courier New', ui-monospace , monospace;
+    color: goldenrod;
+}
+
+h2 {
+    font-family: 'Courier New', ui-monospace , monospace;
+    color: goldenrod;
+}
+body {
+    background-color: beige;
+    box
+}
+
+.container {
+    background-color: black;
+    width: 50%;
+    border: 2px solid goldenrod;
+    margin: auto;
+    box-shadow: 10px 10px gray;
+    
+}
+
+.shade {
+    background-color: grey;
+    opacity: 0.75;
+    height: 150px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Courier New', ui-monospace , monospace;
+    color: white;
+
+}
