@@ -2,12 +2,14 @@
 assign_2.py, student step calculate
 """
 
+
 def main():
     """
     health check
     """
     print("This file is working as is")
     calculate_steps(2)
+
 
 def calculate_steps(num_of_students):
     """
@@ -25,8 +27,8 @@ def calculate_steps(num_of_students):
 
         total_steps = total_steps + steps
 
-    percent = float((count/num_of_students) * 100)
-    average_steps = total_steps/num_of_students
+    percent = float((count / num_of_students) * 100)
+    average_steps = total_steps / num_of_students
     achieved_target = count
     not_achieved_target = num_of_students - count
 

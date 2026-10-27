@@ -2,6 +2,7 @@
 This just tool 2
 """
 
+
 def main():
     """
     health checks
@@ -11,6 +12,7 @@ def main():
     for i in sample_list:
         print(count_number(i))
 
+
 def count_number(num: int):
     count = 0
 
@@ -18,6 +20,7 @@ def count_number(num: int):
         num //= 10
         count += 1
     return count
+
 
 if __name__ == "__main__":
     main()

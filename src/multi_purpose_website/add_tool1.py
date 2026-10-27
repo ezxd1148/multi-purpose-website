@@ -2,31 +2,34 @@
 This is for "What makes me mad" tool or plugin
 """
 
+
 class UserInput:
     """
-        classInput, takes user name and why as a whole
+    classInput, takes user name and why as a whole
 
-        input: Name, Why
+    input: Name, Why
     """
-    def __init__(self, name, why = None):
+
+    def __init__(self, name, why=None):
         self.name = name
         self.why = why
 
     def user_name(self, name):
         """
-            This is to rename user
+        This is to rename user
         """
         self.name = name
 
     def user_why(self, why):
         """
-            This is to set user's 'why'
+        This is to set user's 'why'
         """
         self.why = why
 
+
 def main():
     """
-        Healthcheck for this add_tool1.py if run as is
+    Healthcheck for this add_tool1.py if run as is
     """
     print("Healthcheck")
 
@@ -40,5 +43,7 @@ def main():
     except Exception as e:
         print(f"Error found: {e}")
         raise
+
+
 if __name__ == "__main__":
     main()

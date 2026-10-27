@@ -6,6 +6,7 @@ from enum import Enum
 
 # IN PROGRESS FOR REFACTORING
 
+
 def main():
     """
     healthchecks
@@ -16,7 +17,6 @@ def main():
     students_list = []
 
     for i in range(students):
-
         print(f"Student {i + 1}")
         student = Student()
         quiz_m = int(input("Enter quiz marks:"))
@@ -32,19 +32,23 @@ def main():
     for i in students_list:
         print(i.student_grade())
 
+
 class Student:
     """
     Initialize newstudent class
     """
-    def __init__(self, quiz = 0, assignment = 0, exam = 0):
+
+    def __init__(self, quiz=0, assignment=0, exam=0):
         self.quiz = quiz
         self.assignment = assignment
-        self.exam = exam # removed commas from all 3 because thats what making em all tuple
+        self.exam = (
+            exam  # removed commas from all 3 because thats what making em all tuple
+        )
         # decided to remove sum and grade because both are derived from 3
 
     def quiz_marks(self, x):
         """
-            Add/Update new quiz marks for student
+        Add/Update new quiz marks for student
         """
         if not 0 <= x <= 40:
             raise ValueError("Marks is more than 40 or less than 0")
@@ -52,7 +56,7 @@ class Student:
 
     def assignment_marks(self, x):
         """
-            Add/Update new assignment marks for student
+        Add/Update new assignment marks for student
         """
         if not 0 <= x <= 30:
             raise ValueError("Marks is more than 30 or less than 0")
@@ -60,10 +64,10 @@ class Student:
 
     def exam_marks(self, x):
         """
-            Add/Update new exam marks for student  
+        Add/Update new exam marks for student
         """
 
-        if not 0 <= x <= 30: # negative value should not be possible
+        if not 0 <= x <= 30:  # negative value should not be possible
             raise ValueError("Marks is more than 30 or less than 0")
         self.exam = x
 
@@ -95,8 +99,9 @@ class Student:
 
     class Grade(Enum):
         """
-            Grade enum
+        Grade enum
         """
+
         A = 1
         B = 2
         C = 3
@@ -104,5 +109,6 @@ class Student:
         E = 5
         F = 6
 
-if __name__ == "__main__": # it is main genius
+
+if __name__ == "__main__":  # it is main genius
     main()
