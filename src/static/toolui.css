@@ -1,5 +1,17 @@
 
 label {
     font-family: 'Courier New', ui-monospace , monospace;
+    padding-left: 10px;
+    
+}
+
+input {
+    margin: 20px 20px 20px 20px;
+
+}
+
+.inputs {
+    display: block;
+    
     
 }

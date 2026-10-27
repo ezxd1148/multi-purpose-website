@@ -1,4 +1,4 @@
-p {
+div > p {
     padding: 0px 0px 0px 20px; 
     text-shadow: 2px 2px black; 
     font-size: smaller;
@@ -22,7 +22,7 @@ h2 {
 body {
     background-color: beige;
     background-image: url('../assets/toolss.jpg');
-    background-blend-mode: lighten;
+    background-blend-mode: darken;
 }
 
 .container {
@@ -73,3 +73,12 @@ button:hover {
     width: 75%;
 }
 
+p , a {
+    font-family: 'Courier New', ui-monospace , monospace;
+    margin-left: 20px;
+}
+
+.outlierig {
+    font-family: 'Courier New', ui-monospace , monospace;
+    margin-left: 20px;
+}
