@@ -19,7 +19,7 @@ def calculates_flour(flour_weights: list[float]):
     """
 
     for i in flour_weights:
-        if !(0 <= i <= 100):
+        if not 0 <= i <= 100:
             raise ValueError("Flour weight should only be in 0 - 100 range")
 
     if not flour_weights:
