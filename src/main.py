@@ -10,6 +10,7 @@ by: ezxd1148 (afdhal)
 
 from flask import Flask, render_template, request
 from multi_purpose_website.assign_3 import Student
+from multi_purpose_website.prac_2 import count_number
 
 app = Flask(__name__)
 
@@ -20,12 +21,25 @@ def index():
     """
     return render_template('index.html')
 
-@app.route("/tool1")
+@app.route("/tool1", methods=["GET", "POST"])
 def tool1():
     """
         Return tool1 page for route /tool1
+
+        prac_2.py
     """
-    return render_template('tool1.html')
+    result = None
+    error = None
+
+    if request.method == "POST":
+        try:
+            num = int(request.form["num"])
+            result = count_number(num)
+
+        except ValueError as e:
+            error = "Error:" + e
+
+    return render_template('tool1.html', result=result, error=error)
 
 #p2
 @app.route("/tool2")
@@ -87,16 +101,3 @@ def tool6():
         Return tool6 page for route /tool6
     """
     return render_template('tool6.html')
-
-@app.route("/debug_test", methods=["GET", "POST"])
-def debug_test():
-    """
-        Debug route at /test
-    """
-    ## debug_test = None
-
-    if request.method == "POST":
-        text = request.form.get("student_count", "")
-        print(text)
-
-    return render_template('tool5.html')
