@@ -15,6 +15,21 @@
     </div>
 </head>
 
+<form method="POST" action="{{ url_for('tool5') }}">
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="why">Why:</label>
+  <input type="text" name="why" id="why" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+{% if result %}
+  <p>Name: {{ result.name }}</p>
+  <p>Why: {{ result.why }}</p>
+{% endif %}
+
 <br>
 <br>
 <a href="/">Go Back</a>

@@ -10,7 +10,7 @@ class UserInput:
     input: Name, Why
     """
 
-    def __init__(self, name, why=None):
+    def __init__(self, name=None, why=None):
         self.name = name
         self.why = why
 

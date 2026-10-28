@@ -10,6 +10,7 @@ by: ezxd1148 (afdhal)
 
 from flask import Flask, render_template, request
 
+from multi_purpose_website.add_tool1 import UserInput
 from multi_purpose_website.assign_1 import calculates_flour
 from multi_purpose_website.assign_3 import Student
 from multi_purpose_website.prac_2 import count_number
@@ -98,7 +99,7 @@ def tool3():
 
 
 @app.route("/tool4", methods=["GET", "POST"])
-def tool5():
+def tool4():
     """
     PROGRESS: Done
 
@@ -131,8 +132,8 @@ def tool5():
     return render_template("tool4.html", result=result, error=error)
 
 
-@app.route("/tool5")
-def tool4():
+@app.route("/tool5", methods=["GET", "POST"])
+def tool5():
     """
     PROGRESS: Not Started
 
@@ -140,4 +141,24 @@ def tool4():
 
     add_tool1.py
     """
-    return render_template("tool5.html")
+
+    result = None
+    error = None
+
+    if request.method == "POST":
+        try:
+            name = str(request.form["name"])
+            why = str(request.form["why"])
+
+            user_input = UserInput()
+            user_input.user_name(name)
+            user_input.user_why(why)
+
+            result = {
+                "name": user_input.name,
+                "why": user_input.why,
+            }
+        except ValueError:
+            error = "Please enter valid name/why"
+
+    return render_template("tool5.html", result=result, error=error)
