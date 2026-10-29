@@ -2,7 +2,7 @@
 
 A collection of simple, browser-based utilities built with Python and Flask. This project brings together small programming exercises and practical tools into a single web application.
 
-> By ezxd1146 & Eizdihar for Hack Club Dyad
+> By ezxd1148 & Xtreizz for Hack Club Dyad
 
 ## Overview
 
